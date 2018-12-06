@@ -7,6 +7,7 @@ def restart():
     playerItems = []
     enteredRooms = []
     openedDoors = []
+    money = 0
     
     
     user = raw_input("Would you like to restart the game? ")
