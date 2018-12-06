@@ -1,3 +1,4 @@
+from ethicaldecisionfinished_ import restart
 def footballField():
     exitRoom = False
     defense = False
@@ -145,6 +146,9 @@ def footballField():
                 print('What a loser. Next time try not to be pathetic.')
                 print('Now you gotta start all over again.')
                 restart()
+        else:
+            userAction = raw_input('Not a valid action. Try again.')
+                
 if 'footballField' in enteredRooms:
     print('You have already played the game. Everyone hates you and you can not play again. You have been banished back to the park.')
 if 'footballField' not in enteredRooms:
