@@ -166,7 +166,9 @@ def footballField():
                 if userAction == 'give up':
                     print ('That is no way to win a girl. Only those who deserve the victory get the girl.')
                     restart()
-                
+        if userAction == 'no' or 'No':
+            print ('You must say yes to win the girl. Try again. ')
+            restart()
 if 'footballField' in enteredRooms:
     print('You have already played the game. Everyone hates you and you can not play again. You have been banished back to the park.')
 if 'footballField' not in enteredRooms:
