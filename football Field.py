@@ -1,4 +1,5 @@
 from ethicaldecisionfinished_ import restart
+enteredRooms = []
 def footballField():
     exitRoom = False
     defense = False
@@ -9,7 +10,7 @@ def footballField():
         userAction = raw_input('A child walks up to you and challenges you to a football game. If you win you get $10. Do you accept his challenge?')
         if userAction == 'yes':
             print ('The game has begun')
-            print ('Choose what play you want to execute, pass or run?')
+            userAction = raw_input ('Choose what play you want to execute, pass or run?')
             if userAction == 'pass':
                 print ('You chose a pass play.')
                 print ('You are the Quarterback.')
@@ -116,8 +117,7 @@ def footballField():
                                         if userAction == 'throw back coner':
                                             print ('Good call. Your reciver made a dart to the back corner and makes a tremendous catch.')
                                             print ('Congrats on beating the 5 year olds. You got $10.')
-                                        else:
-                                            userAction = raw_input('Not a valid action. Try again.')    
+                                       
                                     if userAction =='run':
                                         print ('Lame only weaklings try to run the football.')
                                         print ('The defense looks like they are blitzing.')
@@ -130,57 +130,43 @@ def footballField():
                                                 defense = True
                                             if userAction == 'finesse it':
                                                 print ('PERFECT PASS INTO THE ENDZONE! TOUCHDOWN! YOU WIN! You recieve $10 dollars for your efforts')
-                                            else:
-                                                userAction = raw_input('Not a valid action. Try again. ')    
+                                              
                                         if userAction == 'no':
                                             print('Moron. You are sacked and lose and fumble. They pick up the ball and take into the endzone. You lose!')
                                             restart()
-                                        else:
-                                            userAction = raw_input('Not a valid action. Try again. ')    
-                                    else:
-                                        userAction = raw_input('Not a valid action. Try again. ')        
+                                        
+                                          
                                 if userAction == 'throw a bomb':                                    
                                     print('Good call. The running back snags the football and streaks into the endzone. TOUCHDOWN!!! You win $10')
                                 if userAction == 'wait for something else':
                                     print('That was stupid. You just watch a dub go by.')
                                     print('Instead you get sacked and fumble the football. Good job idiot.')
                                     defense = True
-                                else:
-                                    userAction = raw_input('Not a valid action. Try again.')
+                               
                         if userAction == 'run':
                             print('You hand the ball off to the running back and watch in awe as he carries your team.')
                             print ('He breaks 7 tackles on his way to the endzone winning the game for your team.')
                             print('Congrats on winning $10 by doing nothing.')
-                        else:
-                            userAction = raw_input('Not a valid action. Try again. ')    
-                    else:
-                        userAction = raw_input('Not a valid action. Try again. ')   
-                else:
-                    userAction = raw_input('Not a valid action. Try again. ')             
+                        
+                              
             if userAction == 'run':
                 print('You wanted to win but your team was conspiring against you and intentionally gives the ball to the other team.')
                 print('You watch helplessly as the other team showboats their way into the endzone for a touchdown.')
                 print('What a loser. Next time try not to be pathetic.')
                 print('Now you gotta start all over again.')
                 restart()
-            else:
-                userAction = raw_input('Not a valid action. Try again.')                        
-        if defense == True:
-            print('You must now defend the best offense to ever exist.')
-            userAction = raw_input('Do you want to play conservative defense, aggressive defense, or give up? ')
-            if userAction == 'conservative defense':
-                print('The running back for the other team destroys your entire defense and scores a touchdown on 3 plays. Should have been more aggressive. ')
-                restart()
-            if userAction == 'aggressive defense':
-                print ('The quarterback fakes a hand off and then burns you for a 68 yard touchdown. Should have been more conservative. ')
-                restart()
-            if userAction == 'give up':
-                print ('That is no way to win a girl. Only those who deserve the victory get the girl.')
-                restart()
-            else:
-                userAction = raw_input('Not a valid action. Try again.')            
-        else:
-            userAction = raw_input('Not a valid action. Try again.')
+            if defense == True:
+                print('You must now defend the best offense to ever exist.')
+                userAction = raw_input('Do you want to play conservative defense, aggressive defense, or give up? ')
+                if userAction == 'conservative defense':
+                    print('The running back for the other team destroys your entire defense and scores a touchdown on 3 plays. Should have been more aggressive. ')
+                    restart()
+                if userAction == 'aggressive defense':
+                    print ('The quarterback fakes a hand off and then burns you for a 68 yard touchdown. Should have been more conservative. ')
+                    restart()
+                if userAction == 'give up':
+                    print ('That is no way to win a girl. Only those who deserve the victory get the girl.')
+                    restart()
                 
 if 'footballField' in enteredRooms:
     print('You have already played the game. Everyone hates you and you can not play again. You have been banished back to the park.')
