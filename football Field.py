@@ -90,63 +90,95 @@ def footballField():
                         print('No one but you knows why you decide to throw a bomb on a screen pass, but I guess you do.')
                         print('Then again why anyone would be pathetic enough to throw a screen pass is beyond me.')
                         print('Lucky for you the reciever makes a remarkable catch, but only gets a couple yards.')
-                        userAction = raw_input('Time for another play. What type of play do you want to do, pass or run?')
+                        userAction = raw_input('Time for another play. What type of play do you want to do, pass or run? ')
                         if userAction == 'pass':
                             print('As the star quarterback you hike the ball and drop back to pass')
-                            userAction = raw_input('Your best reciever is running free deep do you want to launch it to him, yes or no?')
+                            userAction = raw_input('Your best reciever is running free deep do you want to launch it to him, yes or no? ')
                             if userAction == 'yes':
                                 print('Dang. Unlucky for you the safety read your mind and shaded over at the last second and picked you off.')
                                 print('Sucks to suck my dude.')
                                 defense = True
                             if userAction == 'no':
                                 print ('Good call. The safety began shifting that way leaving your running back wide open.')
-                                userAction = raw_input('What do you do, throw a bullet, throw a bomb, or wait for something else.')
+                                userAction = raw_input('What do you do, throw a bullet, throw a bomb, or wait for something else? ')
                                 if userAction == 'throw a bullet':
                                     print('Your running back tries to come back for the ball but it is batted down by the corner back. Incomplete.')
                                     print('This is 3rd down. It is time for greatness.')
-                                    userAction = raw_input('You decide your fate, pass or run')
+                                    userAction = raw_input('You decide your fate, pass or run? ')
                                     if userAction == ('pass'):
                                         print('You have a new found faith in your throwing ability.')
                                         print('You hike the football and drop back to pass.')
                                         print ('All your reciever are running verticals. It is miracle time.')
-                                        userAction = raw_input('Do you, let it fly or throw back corner?')
+                                        userAction = raw_input('Do you, let it fly or throw back corner? ')
                                         if userAction == 'let it fly':
                                             print('Sadly your dumb choice gave the ball to the other team via interception. GARBAGE!!!')
                                             defense = True
                                         if userAction == 'throw back coner':
                                             print ('Good call. Your reciver made a dart to the back corner and makes a tremendous catch.')
                                             print ('Congrats on beating the 5 year olds. You got $10.')
+                                        else:
+                                            userAction = raw_input('Not a valid action. Try again.')    
                                     if userAction =='run':
                                         print ('Lame only weaklings try to run the football.')
                                         print ('The defense looks like they are blitzing.')
-                                        print('Would you like to audible, yes or no?')
+                                        userAction = raw_input('Would you like to audible, yes or no? ')
                                         if userAction == 'yes':
                                             print ('You audibled to a pass play.')
-                                            userAction = raw_input('All your recievers run deep. Do you throw a bomb or finesse it?')
+                                            userAction = raw_input('All your recievers run deep. Do you throw a bomb or finesse it? ')
                                             if userAction == 'throw a bomb':
                                                 print ('Congrats you are the worst quarterback in the world. Interception for you.')
                                                 defense = True
                                             if userAction == 'finesse it':
                                                 print ('PERFECT PASS INTO THE ENDZONE! TOUCHDOWN! YOU WIN! You recieve $10 dollars for your efforts')
+                                            else:
+                                                userAction = raw_input('Not a valid action. Try again. ')    
                                         if userAction == 'no':
                                             print('Moron. You are sacked and lose and fumble. They pick up the ball and take into the endzone. You lose!')
                                             restart()
+                                        else:
+                                            userAction = raw_input('Not a valid action. Try again. ')    
+                                    else:
+                                        userAction = raw_input('Not a valid action. Try again. ')        
                                 if userAction == 'throw a bomb':                                    
                                     print('Good call. The running back snags the football and streaks into the endzone. TOUCHDOWN!!! You win $10')
                                 if userAction == 'wait for something else':
                                     print('That was stupid. You just watch a dub go by.')
                                     print('Instead you get sacked and fumble the football. Good job idiot.')
                                     defense = True
+                                else:
+                                    userAction = raw_input('Not a valid action. Try again.')
                         if userAction == 'run':
                             print('You hand the ball off to the running back and watch in awe as he carries your team.')
                             print ('He breaks 7 tackles on his way to the endzone winning the game for your team.')
                             print('Congrats on winning $10 by doing nothing.')
+                        else:
+                            userAction = raw_input('Not a valid action. Try again. ')    
+                    else:
+                        userAction = raw_input('Not a valid action. Try again. ')   
+                else:
+                    userAction = raw_input('Not a valid action. Try again. ')             
             if userAction == 'run':
                 print('You wanted to win but your team was conspiring against you and intentionally gives the ball to the other team.')
                 print('You watch helplessly as the other team showboats their way into the endzone for a touchdown.')
                 print('What a loser. Next time try not to be pathetic.')
                 print('Now you gotta start all over again.')
                 restart()
+            else:
+                userAction = raw_input('Not a valid action. Try again.')                        
+        if defense == True:
+            print('You must now defend the best offense to ever exist.')
+            userAction = raw_input('Do you want to play conservative defense, aggressive defense, or give up? ')
+            if userAction == 'conservative defense':
+                print('The running back for the other team destroys your entire defense and scores a touchdown on 3 plays. Should have been more aggressive. ')
+                restart()
+            if userAction == 'aggressive defense':
+                print ('The quarterback fakes a hand off and then burns you for a 68 yard touchdown. Should have been more conservative. ')
+                restart()
+            if userAction == 'give up':
+                print ('That is no way to win a girl. Only those who deserve the victory get the girl.')
+                restart()
+            else:
+                userAction = raw_input('Not a valid action. Try again.')            
         else:
             userAction = raw_input('Not a valid action. Try again.')
                 
