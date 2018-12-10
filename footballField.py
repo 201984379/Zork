@@ -4,29 +4,28 @@ def footballField():
     exitRoom = False
     defense = False
     global enteredRooms
-    userAction = raw_input()
     while exitRoom == False:
         print('You arrived at the football field')
         userAction = raw_input('A child walks up to you and challenges you to a football game. If you win you get $10. Do you accept his challenge?')
-        if userAction == 'yes':
+        if userAction == 'yes' or 'Yes':
             print ('The game has begun')
             userAction = raw_input ('Choose what play you want to execute, pass or run?')
-            if userAction == 'pass':
+            if userAction == 'pass' or 'Pass':
                 print ('You chose a pass play.')
                 print ('You are the Quarterback.')
                 print ('You hike the football and drop back to pass')
                 userAction = raw_input('You have 3 recievers, a, b,and c. All of them are covered by a defender. Choose which reciever to throw it to.')
-                if userAction == 'a':
+                if userAction == 'a'or 'A':
                     userAction = raw_input('They are running a vertical route. Would you like to throw a bullet or a bomb?')
-                    if userAction == 'bullet':
+                    if userAction == 'bullet' or  'Throw a bullet' or 'throw a bullet':
                         print ('Moron. What a horrible decision. You severly underthrew the reciever and your pass was intercepted!')
                         print ('Now the other team has the chance to win')
                         defense = True
-                    if userAction == 'bomb':
+                    if userAction == 'bomb' or 'Throw a bomb' or 'throw a bomb':
                         print ('Good choice. The reciever catches the ball for a touchdown. You won the game!')
                 if userAction == 'b':
                     userAction = raw_input('They are running a slant route. Would you like to throw a bullet or a bomb?')
-                    if userAction == 'bullet':
+                    if userAction == 'bullet' or 'Throw a bullet' or 'throw a bullet':
                         print ('Smart decision.')
                         print ('The reciever caught the pass, but was tackled for a small gain.')
                         userAction = raw_input('You now have to run another play, pass or run?')
@@ -155,7 +154,7 @@ def footballField():
                 print('What a loser. Next time try not to be pathetic.')
                 print('Now you gotta start all over again.')
                 restart()
-            '''if defense == True:
+            if defense == True:
                 print('You must now defend the best offense to ever exist.')
                 userAction = raw_input('Do you want to play conservative defense, aggressive defense, or give up? ')
                 if userAction == 'conservative defense':
@@ -166,7 +165,7 @@ def footballField():
                     restart()
                 if userAction == 'give up':
                     print ('That is no way to win a girl. Only those who deserve the victory get the girl.')
-                    restart()'''
+                    restart()
                 
 if 'footballField' in enteredRooms:
     print('You have already played the game. Everyone hates you and you can not play again. You have been banished back to the park.')
