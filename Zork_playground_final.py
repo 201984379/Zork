@@ -8,11 +8,13 @@ money = 0
 def center():
     print('you return to the map') #Remove this on compilation
 def playground():
+    global position
     global playerItems
     global enteredRooms
     global openedDoors
     global money
     exitRoom = False
+    position = 3
     chestItems = ['shovel']
     print('You have entered the playground, and are standing at the playground bench!')
     print('There are many things to do on the playgorund!  There is a ladder to a slide, a sandbox, a swingset, and a toy chest!')
@@ -22,7 +24,7 @@ def playground():
             print('You see that all of the swings are occupied. You walk back to the playground bench. ')
         elif (userAction == 'go to slide') or (userAction == 'walk to slide') or (userAction == 'run to slide'):#This section of code lets the  user head to the slide and go down it
             slideAction = raw_input('You are at the bottom of the ladder. ')
-            if (slideAction == 'Climb ladder') or (slideAction == 'go up ladder'):
+            if (slideAction == 'climb ladder') or (slideAction == 'go up ladder'):
                 print('You climbed the ladder and went down the slide! Congratulations! You walk back to the playground bench. ')
             elif (slideAction == 'return to bench') or (slideAction == 'go to bench') or (slideAction == 'walk to bench'):
                 print('You are standing at the bench. ')
@@ -45,6 +47,6 @@ def playground():
                 money += 10
                 exitRoom == True
         elif (userAction == 'return to map') or (userAction == 'go to map') or (userAction =='go back to map') or (userAction == 'walk to map'):#This section of code lets the user return to the map in the center of the park
-            center()
+            position = 4
         else:
             userAction = raw_input('Not a valid action.  Try Again! ')
