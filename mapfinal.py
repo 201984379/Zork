@@ -1,8 +1,10 @@
 from __future__ import print_function
 import random
+from myfootballField import footballField
 times_entered_map = 0
+enteredRooms = []
 def readMap():
-    print("At the park there is a football field, a girl, a flower shop, a bench, and a playground")
+    print("At the park there is a football field, a girl who is wearing all purple, a flower shop, a bench, and a playground")
     print("Navigate by saying where you want to go without using capital letters. Good luck!")
 def center():
     global times_entered_map
@@ -30,6 +32,7 @@ def center():
             flowers()
         elif (user == "girl") or (user == "go to girl"):
             girl()
+        elif (user == "bench") or (user == "go to bench") or (user == "go to the bench")
         else:
             print("I don't understand that")
             user = raw_input("Try again: ")
