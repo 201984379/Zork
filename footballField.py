@@ -1,6 +1,6 @@
 from ethicaldecisionfinished_ import restart
 enteredRooms = []
-def footballField():
+def footballField(): 
     exitRoom = False
     defense = False
     global enteredRooms
@@ -22,7 +22,8 @@ def footballField():
                         print ('Now the other team has the chance to win')
                         defense = True
                     if userAction == 'bomb' or userAction == 'Throw a bomb' or userAction == 'throw a bomb':
-                        print ('Good choice. The reciever catches the ball for a touchdown. You won the game!')
+                        print ('Good choice. The reciever catches the ball for a touchdown. You won the game! You get $10!')
+                        exitRoom = True
                 if userAction == 'b' or userAction == 'B':
                     userAction = raw_input('They are running a slant route. Would you like to throw a bullet or a bomb?')
                     if userAction == 'bullet' or userAction =='Throw a bullet' or userAction =='throw a bullet':
@@ -61,6 +62,7 @@ def footballField():
                                     if userAction == 'truck them' or userAction =='Truck them':
                                         print ('You truck the weakling and celebrate your way into the endzone')
                                         print ('You score and win the game. You got your $10')
+                                        exitRoom = True
                             if userAction == 'launch it deep' or userAction =='Launch it deep':
                                 print ('You close you eyes and throw a prayer towards the endzone.')
                                 print ('Your prayers were not answered however as your pass was intercepted. Good job Mark Sanchez.')
@@ -113,9 +115,10 @@ def footballField():
                                         if userAction == 'let it fly' or userAction =='Let if fly':
                                             print('Sadly your dumb choice gave the ball to the other team via interception. GARBAGE!!!')
                                             defense = True
-                                        if userAction == 'throw back corner' or userAction =='Throw back corner:
+                                        if userAction == 'throw back corner' or userAction =='Throw back corner':
                                             print ('Good call. Your reciver made a dart to the back corner and makes a tremendous catch.')
                                             print ('Congrats on beating the 5 year olds. You got $10.')
+                                            exitRoom = True
                                        
                                     if userAction =='run' or userAction =='Run':
                                         print ('Lame only weaklings try to run the football.')
@@ -129,6 +132,7 @@ def footballField():
                                                 defense = True
                                             if userAction == 'finesse it' or userAction =='Finesse it':
                                                 print ('PERFECT PASS INTO THE ENDZONE! TOUCHDOWN! YOU WIN! You recieve $10 dollars for your efforts')
+                                                exitRoom = True
                                               
                                         if userAction == 'no' or userAction =='No':
                                             print('Moron. You are sacked and lose and fumble. They pick up the ball and take into the endzone. You lose!')
@@ -137,6 +141,7 @@ def footballField():
                                           
                                 if userAction == 'throw a bomb' or userAction =='Throw a bomb':                                    
                                     print('Good call. The running back snags the football and streaks into the endzone. TOUCHDOWN!!! You win $10')
+                                    exitRoom = True
                                 if userAction == 'wait for something else' or userAction =='Wait for something else':
                                     print('That was stupid. You just watch a dub go by.')
                                     print('Instead you get sacked and fumble the football. Good job idiot.')
@@ -146,6 +151,7 @@ def footballField():
                             print('You hand the ball off to the running back and watch in awe as he carries your team.')
                             print ('He breaks 7 tackles on his way to the endzone winning the game for your team.')
                             print('Congrats on winning $10 by doing nothing.')
+                            exitRoom = True
                         
                               
             if userAction == 'run' or userAction =='Run':
@@ -154,7 +160,7 @@ def footballField():
                 print('What a loser. Next time try not to be pathetic.')
                 print('Now you gotta start all over again.')
                 restart()
-            if defense == userAction ==True:
+            if defense ==True:
                 print('You must now defend the best offense to ever exist.')
                 userAction = raw_input('Do you want to play conservative defense, aggressive defense, or give up? ')
                 if userAction == 'conservative defense' or userAction =='Conservative' or userAction =='Conservative defense' or userAction =='conservative':
@@ -173,5 +179,3 @@ if 'footballField' in enteredRooms:
     print('You have already played the game. Everyone hates you and you can not play again. You have been banished back to the park.')
 if 'footballField' not in enteredRooms:
     enteredRooms += ['footballField']
-    
-
