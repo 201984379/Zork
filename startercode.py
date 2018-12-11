@@ -10,7 +10,7 @@ def startGame():
     raw_input('Press enter to start the game. ')
     room1()
 
-def room1():
+def room1(): 
     global playerItems
     global enteredRooms
     global openedDoors
