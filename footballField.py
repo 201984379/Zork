@@ -6,10 +6,13 @@ def footballField():
     global enteredRooms
     while exitRoom == False:
         print('You arrived at the football field')
+        #This next code is what calls for user input on whether or not they want to play the game
         userAction = raw_input('A child walks up to you and challenges you to a football game. If you win you get $10. Do you accept his challenge?')
+        #if they say yes then it asks them if they want to run or pass the football
         if userAction == 'yes' or userAction ==  'Yes':
             print ('The game has begun')
             userAction = raw_input ('Choose what play you want to execute, pass or run?')
+            #If they say pass it runs a pass scenerio
             if userAction == 'pass' or userAction == 'Pass':
                 print ('You chose a pass play.')
                 print ('You are the Quarterback.')
@@ -20,17 +23,21 @@ def footballField():
                     if userAction == 'bullet' or userAction ==  'Throw a bullet' or userAction == 'throw a bullet':
                         print ('Moron. What a horrible decision. You severly underthrew the reciever and your pass was intercepted!')
                         print ('Now the other team has the chance to win')
+                      #if they throw a pick it set the variable defense to true
                         defense = True
                     if userAction == 'bomb' or userAction == 'Throw a bomb' or userAction == 'throw a bomb':
                         print ('Good choice. The reciever catches the ball for a touchdown. You won the game! You get $10!')
+                        #if they score then it gets them out of the loop so that they can go to other rooms. 
                         exitRoom = True
                 if userAction == 'b' or userAction == 'B':
+                    '''All if statements that are dependent upon the user input. There are many decisions to be made, each of which can lead to success or failure.
+                    The initial decision is always less significant than the follow up question.''' 
                     userAction = raw_input('They are running a slant route. Would you like to throw a bullet or a bomb?')
-                    if userAction == 'bullet' or userAction =='Throw a bullet' or userAction =='throw a bullet':
+                    if userAction == 'bullet' or userAction =='Throw a bullet' or userAction =='throw a bullet': #Different options to communicate the same idea
                         print ('Smart decision.')
                         print ('The reciever caught the pass, but was tackled for a small gain.')
                         userAction = raw_input('You now have to run another play, pass or run?')
-                        if userAction == 'pass' or userAction == 'Pass':
+                        if userAction == 'pass' or userAction == 'Pass': #The user can capitalize or not, it doesnt matter
                             print ('You chose pass play. You hike the football and drop back to pass.')
                             print ('The defense decided to blitz and they are bringing pressure.')
                             userAction = raw_input('Are you going to tuck and run, or launch it deep.')
@@ -41,16 +48,18 @@ def footballField():
                                 if userAction == 'juke right' or userAction == 'Juke right':
                                     print ('You try to juke right but the defender read you mind and tackles you.')
                                     print ('Your clumsy self fumbled the football and now the other team has a chance to score.')
-                                    defense = True
-                                if userAction == 'juke left' or userAction =='Juke left':
+                                    defense = True #This calls 'defense'. There's no good option, either left or right leads to calling defense
+                                if userAction == 'juke left' or userAction =='Juke left': #user input for trying to avoid defense
                                     print ('You broke their ankles and break free into the secondary.')
                                     print ('A smaller child runs towards you to tackle you.')
                                     userAction = raw_input('How do you want to get past them, stiff arm or truck them.')
                                     if userAction == 'stiff arm' or userAction =='Stiff arm':
+                                        #still trying to get past the defender.
                                         print ('You try to stiff arm them but they are small enough to duck it and wrap around your ankles.')
                                         print ('You are humilated that you were tackled by a 3 year old.')
                                         print ('Everyone is laughing at you what do you do, go back to the playground, or fight the children.')
                                         if userAction == 'go back to the playground' or userAction == 'Go back to the playground':
+                                            #At this point they aren't going to win this one so I had a bit of fun with it.
                                             print ('You are a pathetic loser. Restart the game')
                                             restart()
                                         if userAction == 'fight the children' or userAction == 'Fight the children':
