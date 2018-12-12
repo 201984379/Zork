@@ -1,12 +1,10 @@
 from __future__ import print_function
 import random
-
+import mapfinal
 playerItems = []
 enteredRooms = []
 openedDoors = []
 money = 0
-def center():
-    print('you return to the map') #Remove this on compilation
 def playground():
     global playerItems
     global enteredRooms
