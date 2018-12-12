@@ -185,6 +185,8 @@ def footballField():
         if userAction == 'no' or userAction =='No': # you lose
             print ('You must say yes to win the girl. Try again. ')
             restart()
+    if exitRoom == True:
+        center()        
 if 'footballField' in enteredRooms: #can't play the game twice
     print('You have already played the game. Everyone hates you and you can not play again. You have been banished back to the park.')
 if 'footballField' not in enteredRooms: #adds it so you can't play again
