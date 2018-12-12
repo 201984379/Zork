@@ -1,6 +1,6 @@
 from __future__ import print_function
 import random
-import mapfinal
+from mapfinal import center
 playerItems = []
 enteredRooms = []
 openedDoors = []
