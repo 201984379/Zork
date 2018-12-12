@@ -4,6 +4,7 @@ times_entered_map = 0
 def readMap():
     print("At the park there is a football field, a girl, a flower shop, a bench, and a playground")
     print("Navigate by saying where you want to go without using capital letters. Good luck!")
+    center()
 def center():
     global times_entered_map
     global playerItems
