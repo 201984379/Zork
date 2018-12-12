@@ -1,4 +1,5 @@
 from ethicaldecisionfinished_ import restart
+from mapfinal import center
 enteredRooms = []
 def footballField(): 
     exitRoom = False
