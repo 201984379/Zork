@@ -1,5 +1,5 @@
-money = 0
-position = 3
+global money = 0
+from mapfinal import center
 def flowers():
     global playerItems
     global openedDoors
@@ -15,8 +15,8 @@ def flowers():
         else:
             print('Alright! Here are your flowers!') #Within an elif statement, this 'else' is for if userInput is 'purple'.
             print('You received purple flowers!') 
-            position = 4
             playerItems += 'purpleflowers'    #adding purpleflowers to items, this will be needed for another room
+            center()
     elif userAction == 'buy flowers' and money < 30: #if money , 30, can't enter room and will kick out.
         print('Sorry, you do not have the proper funds! Go get more money!')
     else:
