@@ -1,12 +1,10 @@
 from __future__ import print_function
 import random
-
+from mapfinal import center
 playerItems = []
 enteredRooms = []
 openedDoors = []
 money = 0
-def center():
-    print('you return to the map') #Remove this on compilation
 def playground():
     global position
     global playerItems
@@ -14,7 +12,6 @@ def playground():
     global openedDoors
     global money
     exitRoom = False
-    position = 3
     chestItems = ['shovel']
     print('You have entered the playground, and are standing at the playground bench!')
     print('There are many things to do on the playgorund!  There is a ladder to a slide, a sandbox, a swingset, and a toy chest!')
@@ -45,8 +42,9 @@ def playground():
             if (userAction == 'dig') or (userAction == 'dig in sandbox') or (userAction == 'pick up sand') or (userAction == 'play in sand') or (userAction == 'play in sandbox') and 'shovel' in playerItems:
                 print('You have dug up 10 dollars using the shovel! You return to the park bench with your prize!')
                 money += 10
-                exitRoom == True
+                exitRoom = True
         elif (userAction == 'return to map') or (userAction == 'go to map') or (userAction =='go back to map') or (userAction == 'walk to map'):#This section of code lets the user return to the map in the center of the park
-            position = 4
+            exitRoom = True
+            center()
         else:
             userAction = raw_input('Not a valid action.  Try Again! ')
