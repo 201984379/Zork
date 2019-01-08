@@ -4,6 +4,7 @@ enteredRooms = []
 openedDoors = []
 money = 0
 times_entered_map = 0
+
 def readMap(): #map of the world
     print("At the park there is a football field, a girl, a flower shop, a bench, and a playground")
     print("Navigate by saying where you want to go without using capital letters. Good luck!")
